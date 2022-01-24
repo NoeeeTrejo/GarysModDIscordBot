@@ -5,7 +5,7 @@ A Discord Bot I made, for making it easier for my friend to add addons to his Ga
 
 A Discord Bot that uses discord to be a place to paste Steam Workshop links. Steam workshops are downloaded in batches, the user who runs the server (or anyone), can run a command that goes through all the discord messages in the channel, and adds all workshop links that aren't already installed. 
 
-![Working Bot!](working.gif)
+![Working Bot!](workingbot.gif)
 
 ## How to use: 
 * for  skins do: .GMOD skin <link(s)>
