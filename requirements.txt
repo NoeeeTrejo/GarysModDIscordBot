@@ -1,0 +1,7 @@
+pyppeteer
+discord.py
+python-dotenv
+asyncio
+pathlib
+glob2
+zipfile
