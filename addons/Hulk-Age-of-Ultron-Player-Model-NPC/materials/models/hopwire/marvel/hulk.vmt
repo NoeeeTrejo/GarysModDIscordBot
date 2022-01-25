@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+
+	"$baseTexture" 		"models\hopwire\Marvel\hulk"
+	"$bumpmap" 		"models\hopwire\Marvel\hulkn"
+
+	
+	"$phong" "1"
+	"$phongboost" ".1"
+	"$phongexponent" "20"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[.3 .82 31]"
+	
+	$rimlight 1
+	$rimlightexponent       200
+	$rimlightboost          .5		
+
+}
+
+

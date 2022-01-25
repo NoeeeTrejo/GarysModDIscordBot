@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/jtr/ntxr002"
+	"$bumpmap" "models/jtr/ntxr0201"
+	"$halflambert" "1"
+
+	"$lightwarptexture" "models/jtr\basewarp"
+
+	"$phong" "1"
+	"$phongexponent" "1"
+	"$phongboost"	".1"
+	"$phongfresnelranges"	"[1 .1 .1]"
+	"$phongexponenttexture" "models/jtr/phong_exp"
+	"$phongalbedotint" "1"
+
+	"$rimlight" "1" 
+	"$rimlightexponent" "" 
+	"$rimlightboost" "1" 
+	"$rimmask" 1
+}

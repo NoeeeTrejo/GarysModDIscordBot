@@ -16,7 +16,7 @@ prefix = '.GMOD'
 path_to_GMOD = ""
 path_to_maps = path_to_GMOD + '/maps'
 path_to_addons = path_to_GMOD + '/addons'
-path_to_downloads = 'C:/Users/Owner/Downloads'
+path_to_downloads = 'C:/Users/pineapple/Downloads'
 client = discord.Client()
 
 @client.event
@@ -83,8 +83,7 @@ async def on_message(message):
 
                 directory = path_to_downloads
                 for filename in os.listdir(directory):
-                    print(filename)
-                    if filename.endswith(".zip") and 'gmaextract.download' in filename:
+                    if filename.endswith(".zip"):
                         path_to_file = os.path.join(directory, filename)
                         with ZipFile(path_to_file, 'r') as zipObj:
                             zipObj.extractall("." + path_to_addons)

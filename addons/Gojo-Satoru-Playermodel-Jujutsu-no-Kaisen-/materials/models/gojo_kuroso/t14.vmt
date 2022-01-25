@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/gojo_kuroso/t14"
+	"$nocull" 1
+	"$nodecal" 1
+}
