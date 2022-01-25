@@ -119,7 +119,7 @@ async def on_message(message):
                         os.remove(path_to_file)
 
                 pathname = '.' + path_to_maps + "/**/*.BSP"
-                files = glob.glob(pathname, recursive=True)
+                files = glob.glob(pathname, recursive=True)
                 for bsp in files: 
                     os.rename(bsp, '.' + path_to_maps + '/' + bsp.split('\\')[-1])
                 
