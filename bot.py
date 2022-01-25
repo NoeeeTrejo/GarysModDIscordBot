@@ -11,7 +11,7 @@ import glob
 
 
 load_dotenv()
-TOKEN = 'OTMwMzQ5NzYyMjM3MDM4NjEy.Yd0lvA.3bJ12KbI2e9kbeg5CcZaBm1nl1g'
+TOKEN = 'INSERT_TOKEN_HERE'
 prefix = '.GMOD'
 path_to_GMOD = ""
 path_to_maps = path_to_GMOD + '/maps'
