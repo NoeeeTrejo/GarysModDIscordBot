@@ -4,4 +4,4 @@ python-dotenv
 asyncio
 pathlib
 glob2
-zipfile
+zipfile36
