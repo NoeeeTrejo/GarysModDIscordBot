@@ -11,12 +11,12 @@ import glob
 
 
 load_dotenv()
-TOKEN = 'INSERT_TOKEN_HERE'
+TOKEN = 'OTMwMzQ5NzYyMjM3MDM4NjEy.Yd0lvA.3bJ12KbI2e9kbeg5CcZaBm1nl1g'
 prefix = '.GMOD'
-path_to_GMOD = r""
-path_to_maps = path_to_GMOD + r'\maps'
-path_to_addons = path_to_GMOD + r'\addons'
-path_to_downloads = r"C:\Users\noe\Downloads"
+path_to_GMOD = ""
+path_to_maps = path_to_GMOD + '/maps'
+path_to_addons = path_to_GMOD + '/addons'
+path_to_downloads = 'C:/Users/Owner/Downloads'
 client = discord.Client()
 
 @client.event
@@ -48,7 +48,7 @@ async def on_message(message):
             response = "```"
             
             #Grab what's currently in the workshop.lua file, so we don't redownload the same thing
-            f = open(path_to_GMOD + r'workshop.lua', mode='r')
+            f = open(path_to_GMOD + 'workshop.lua', mode='r')
             installed = f.read()
             f.close()
             f = open(path_to_GMOD + 'workshop.lua', mode='w')
@@ -66,23 +66,24 @@ async def on_message(message):
                     id = link.split('id=')[1].split('&')[0]
                     if (id not in installed) and (link not in typeDownload): 
                         typeDownload.add(link)
-                        f.write(f"""resource.AddWorkshop ("{id}")\n""")
+                        f.write(f"""resource.AddWorkshop ({id})\n""")
                 
             f.close()
 
             if skins:
                 for link in skins: 
                     await page.keyboard.type(f'{link} ') 
-                    await asyncio.sleep(0.25)
+                    await asyncio.sleep(0.001)
 
                 #Turn on AutoDownload
                 for i in range(6): 
                     await page.keyboard.press('Tab')    
                 await page.keyboard.press('Enter')
-                await asyncio.sleep(120) # waiting 60 min for stuff to download 
+                await asyncio.sleep(40) # waiting 60 min for stuff to download 
 
                 directory = path_to_downloads
                 for filename in os.listdir(directory):
+                    print(filename)
                     if filename.endswith(".zip") and 'gmaextract.download' in filename:
                         path_to_file = os.path.join(directory, filename)
                         with ZipFile(path_to_file, 'r') as zipObj:
@@ -111,14 +112,14 @@ async def on_message(message):
                 #TODO: FIX RECURSIVE SEARCH FOR .BSP
                 directory = path_to_downloads
                 for filename in os.listdir(directory):
-                    if filename.endswith(".zip") and 'gmaextract.download' in filename:
+                    if filename.endswith(".zip"):
                         path_to_file = os.path.join(directory, filename)
                         with ZipFile(path_to_file, 'r') as zipObj:
                             zipObj.extractall('.' + path_to_maps)
                         os.remove(path_to_file)
 
                 pathname = '.' + path_to_maps + "/**/*.BSP"
-                files = glob.glob(pathname, recursive=True)
+                files = glob.glob(pathname, recursive=True)
                 for bsp in files: 
                     os.rename(bsp, '.' + path_to_maps + '/' + bsp.split('\\')[-1])
                 
