@@ -1,8 +1,0 @@
-resource.AddWorkshop ("452578740")
-resource.AddWorkshop ("1557999818")
-resource.AddWorkshop ("456200332")
-resource.AddWorkshop ("1780714589")
-resource.AddWorkshop ("2466050310")
-resource.AddWorkshop ("452065494")
-resource.AddWorkshop ("2686641966")
-resource.AddWorkshop ("2043850322")
