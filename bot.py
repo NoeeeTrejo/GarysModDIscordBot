@@ -51,7 +51,7 @@ async def on_message(message):
             f = open(path_to_GMOD + 'workshop.lua', mode='r')
             installed = f.read()
             f.close()
-            f = open(path_to_GMOD + 'workshop.lua', mode='w')
+            f = open(path_to_GMOD + 'workshop.lua', mode='a')
             maps = set() #A set of links for maps and skins
             skins = set()
 
