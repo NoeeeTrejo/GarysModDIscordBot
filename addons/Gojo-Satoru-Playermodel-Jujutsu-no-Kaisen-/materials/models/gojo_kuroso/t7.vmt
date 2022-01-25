@@ -1,6 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/gojo_kuroso/t7"
-	"$nocull" 1
-	"$nodecal" 1
-}
